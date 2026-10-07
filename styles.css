@@ -226,12 +226,6 @@ a,button,summary{
   gap:48px;
   align-items:center
 }
-.hero-copy>.eyebrow{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  margin-bottom:24px
-}
 .hero h1{
   margin-bottom:24px
 }
@@ -287,27 +281,6 @@ a,button,summary{
   box-shadow:var(--shadow);
   min-width:0;
   overflow:hidden
-}
-.demo-topline{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  padding:20px 26px;
-  border-bottom:1px solid #dfe6f1;
-  font-size:11px;
-  color:var(--muted)
-}
-.demo-live{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:650;
-  color:var(--ink)
-}
-.demo-topline .status-dot{
-  width:6px;
-  height:6px
 }
 .demo-body{
   display:grid;
@@ -990,50 +963,6 @@ a,button,summary{
   color:var(--ink);
   font-weight:650
 }
-.roadmap{
-  display:flex;
-  align-items:center;
-  gap:24px;
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:28px 30px;
-  margin-top:40px
-}
-.roadmap-symbol{
-  width:48px;
-  height:48px;
-  background:#fff4de;
-  border-radius:15px;
-  color:var(--gold);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-shrink:0
-}
-.roadmap .eyebrow{
-  color:#85601e;
-  font-size:9px
-}
-.roadmap h3{
-  font-size:20px;
-  margin-top:7px
-}
-.roadmap p:not(.eyebrow){
-  color:var(--muted);
-  font-size:12px;
-  margin-top:8px;
-  max-width:590px
-}
-.roadmap-status{
-  margin-left:auto;
-  flex-shrink:0;
-  font-size:10px;
-  color:var(--muted);
-  padding:5px 10px;
-  background:var(--bg);
-  border-radius:20px
-}
 .faq-section{
   background:#fff;
   border-top:1px solid var(--line)
@@ -1226,9 +1155,6 @@ a,button,summary{
   .demo-footnote{
     margin-top:24px
   }
-  .demo-topline{
-    padding-inline:20px
-  }
   .demo-choice{
     font-size:10px;
     gap:5px
@@ -1274,10 +1200,6 @@ a,button,summary{
   }
   .hero h1{
     font-size:clamp(40px,6.5vw,56px)
-  }
-  .hero-copy>.eyebrow{
-    font-size:9px;
-    letter-spacing:.1em
   }
   .hero-description{
     font-size:15px
@@ -1326,10 +1248,6 @@ a,button,summary{
   }
   .phone-screen{
     border-radius:23px
-  }
-  .demo-topline{
-    padding:14px 17px;
-    font-size:9px
   }
   .demo-switcher{
     padding:9px;
@@ -1452,9 +1370,6 @@ a,button,summary{
   .faq-list summary{
     font-size:13px
   }
-  .roadmap-status{
-    display:none
-  }
 }
 @media(max-width:650px){
   html{
@@ -1507,10 +1422,6 @@ a,button,summary{
     grid-template-columns:1fr;
     gap:34px
   }
-  .hero-copy>.eyebrow{
-    font-size:9px;
-    margin-bottom:18px
-  }
   .hero h1{
     font-size:clamp(44px,13vw,76px);
     line-height:1.04;
@@ -1546,10 +1457,6 @@ a,button,summary{
   }
   .demo-stage{
     border-radius:24px
-  }
-  .demo-topline{
-    padding:16px 18px;
-    font-size:10px
   }
   .demo-body{
     display:flex;
@@ -1791,29 +1698,6 @@ a,button,summary{
     gap:14px;
     font-size:11px;
     padding:0 4px
-  }
-  .roadmap{
-    align-items:flex-start;
-    gap:15px;
-    padding:23px 20px;
-    margin-top:27px
-  }
-  .roadmap-symbol{
-    width:36px;
-    height:36px;
-    border-radius:11px
-  }
-  .roadmap-symbol svg{
-    width:19px;
-    height:19px
-  }
-  .roadmap h3{
-    font-size:19px;
-    line-height:1.3
-  }
-  .roadmap p:not(.eyebrow){
-    font-size:11px;
-    line-height:1.7
   }
   .faq-grid{
     grid-template-columns:1fr;
