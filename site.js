@@ -66,7 +66,6 @@
     const small = document.createElement('small');
     small.textContent = demo.detail;
     document.querySelector('#demo-label span').replaceChildren(document.createTextNode(demo.label), document.createElement('br'), small);
-    document.querySelector('.demo-footnote > span').textContent = String(index + 1).padStart(2, '0');
     buttons.forEach(button => {
       const selected = Number(button.dataset.demo) === index;
       button.classList.toggle('active', selected);

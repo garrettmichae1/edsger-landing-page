@@ -186,15 +186,6 @@ a,button,summary{
   text-transform:uppercase;
   color:var(--blue)
 }
-.status-dot{
-  display:inline-block;
-  flex-shrink:0;
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:#24a678;
-  box-shadow:0 0 0 4px rgba(36,166,120,.1)
-}
 .blue-text{
   color:var(--blue)
 }
@@ -312,31 +303,10 @@ a,button,summary{
   font-weight:650;
   line-height:1.5
 }
-.demo-label svg{
-  width:16px;
-  height:16px;
-  color:var(--blue);
-  margin-top:2px
-}
 .demo-label small{
   font-size:10px;
   font-weight:450;
   color:var(--muted)
-}
-.demo-footnote{
-  display:flex;
-  align-items:center;
-  gap:11px;
-  margin-top:40px;
-  font-size:10px;
-  line-height:1.5;
-  color:var(--muted)
-}
-.demo-footnote>span:first-child{
-  font-size:28px;
-  font-weight:600;
-  letter-spacing:-.06em;
-  color:#abbcd0
 }
 .phone-shell{
   padding:7px;
@@ -508,192 +478,26 @@ a,button,summary{
   border-radius:50%;
   background:var(--blue)
 }
-.study-visual{
-  margin-top:auto;
-  padding:32px 34px 24px;
-  background:linear-gradient(145deg,#eff2ff,#e5efff);
-  border-top:1px solid #e0e7f3;
-  min-height:326px
+/* Screens from the app's existing recordings. */
+.app-screenshot{
+  margin:auto 0 0;
+  padding:28px;
+  border-top:1px solid var(--line);
+  background:var(--bg);
+  text-align:center
 }
-.document-chip{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:13px 16px;
-  background:rgba(255,255,255,.85);
-  border:1px solid #fff;
-  border-radius:13px;
-  font-size:12px;
-  font-weight:650
-}
-.document-chip svg{
-  width:18px;
-  height:18px;
-  color:var(--blue)
-}
-.chip-detail{
-  margin-left:auto;
-  color:var(--muted);
-  font-size:10px;
-  font-weight:450
-}
-.question-bubble{
-  margin:16px 0 16px auto;
-  max-width:240px;
-  padding:14px 18px;
-  border-radius:17px 17px 3px 17px;
-  background:var(--blue);
-  color:white;
-  font-size:12px;
-  line-height:1.5;
-  box-shadow:0 8px 20px rgba(8,102,245,.14)
-}
-.study-answer{
-  background:rgba(255,255,255,.9);
-  border:1px solid #fff;
-  padding:18px 20px;
-  border-radius:18px;
-  box-shadow:0 8px 30px rgba(74,107,170,.06)
-}
-.mini-brand{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  font-size:11px;
-  font-weight:650
-}
-.mini-brand img{
-  width:24px;
-  height:24px;
-  border-radius:6px
-}
-.math-line{
-  font-family:Georgia,serif;
-  font-size:32px;
-  line-height:1.2;
-  margin:18px 0;
-  letter-spacing:.02em
-}
-.math-line sub,.math-line sup{
-  font-size:14px
-}
-.math-line span{
-  color:#97a5b8;
-  margin:0 15px
-}
-.math-line strong{
-  font-weight:400;
-  color:var(--blue)
-}
-.study-answer p{
-  font-size:11px;
-  color:var(--muted);
-  line-height:1.6
-}
-.visual-caption{
+.app-screenshot img{
   display:block;
-  font-size:10px;
+  width:min(100%,220px);
+  height:auto;
+  margin:0 auto;
+  border-radius:20px;
+  border:1px solid var(--line)
+}
+.app-screenshot figcaption{
+  margin-top:14px;
   color:var(--muted);
-  margin-top:18px;
-  line-height:1.5
-}
-.code-visual{
-  margin-top:auto;
-  padding:0 28px 24px;
-  min-height:326px;
-  background:#142033;
-  color:#dce6f6;
-  border-top:1px solid #27384f
-}
-.code-bar{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  font-size:10px;
-  min-height:58px;
-  border-bottom:1px solid #304058;
-  color:#bfccdf
-}
-.code-dots{
-  display:flex;
-  gap:5px
-}
-.code-dots i{
-  display:block;
-  width:6px;
-  height:6px;
-  background:#485b74;
-  border-radius:50%
-}
-.code-dots i:first-child{
-  background:#ec8d8d
-}
-.code-dots i:nth-child(2){
-  background:#e6c472
-}
-.code-dots i:nth-child(3){
-  background:#72c6a0
-}
-.code-language{
-  margin-left:auto;
-  font-size:9px;
-  border:1px solid #485b74;
-  border-radius:5px;
-  padding:2px 7px
-}
-.code-visual pre{
-  font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
-  font-size:clamp(10px,1.1vw,13px);
-  line-height:1.9;
-  white-space:pre-wrap;
-  overflow-wrap:anywhere;
-  margin:23px 0;
-  color:#dce6f6
-}
-.code-comment{
-  color:#8396b0
-}
-.code-name{
-  color:#dce6f6
-}
-.code-number{
-  color:#efbd7f
-}
-.code-call{
-  color:#8ab5ff
-}
-.code-string{
-  color:#a9d9be
-}
-.code-output{
-  border-top:1px solid #304058;
-  padding-top:17px
-}
-.code-output>span:first-child{
-  font-size:9px;
-  letter-spacing:.13em;
-  color:#8396b0
-}
-.code-output p{
-  font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
-  margin-top:8px;
-  font-size:13px;
-  color:#dce6f6
-}
-.output-status{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  font-size:10px;
-  color:#acbcd2;
-  margin-top:18px
-}
-.output-status .status-dot{
-  width:5px;
-  height:5px
-}
-.code-visual .visual-caption{
-  color:#a4b4cb
+  font-size:12px
 }
 .agent-feature{
   display:grid;
@@ -1152,9 +956,6 @@ a,button,summary{
   .demo-description>p:not(.eyebrow){
     font-size:12px
   }
-  .demo-footnote{
-    margin-top:24px
-  }
   .demo-choice{
     font-size:10px;
     gap:5px
@@ -1239,9 +1040,6 @@ a,button,summary{
   .demo-label{
     margin-top:12px
   }
-  .demo-footnote{
-    display:none
-  }
   .phone-shell{
     width:195px;
     border-radius:30px
@@ -1286,15 +1084,6 @@ a,button,summary{
   }
   .feature-points{
     font-size:11px
-  }
-  .study-visual{
-    padding:25px
-  }
-  .chip-detail{
-    display:none
-  }
-  .code-visual{
-    padding-inline:22px
   }
   .model-grid{
     gap:14px
@@ -1493,18 +1282,8 @@ a,button,summary{
     gap:6px;
     margin-top:16px
   }
-  .demo-label svg{
-    width:13px;
-    height:13px
-  }
   .demo-label small{
     font-size:10px
-  }
-  .demo-footnote{
-    display:none
-  }
-  .demo-footnote>span:first-child{
-    font-size:24px
   }
   .demo-switcher{
     padding:10px;
@@ -1574,21 +1353,6 @@ a,button,summary{
   }
   .feature-points{
     font-size:11px
-  }
-  .study-visual{
-    padding:25px;
-    min-height:0
-  }
-  .chip-detail{
-    display:inline;
-    font-size:9px
-  }
-  .code-visual{
-    min-height:0;
-    padding:0 25px 24px
-  }
-  .code-visual pre{
-    font-size:12px
   }
   .agent-feature{
     grid-template-columns:1fr;
@@ -1773,12 +1537,6 @@ a,button,summary{
   }
   .hero-actions{
     gap:17px
-  }
-  .chip-detail{
-    display:none
-  }
-  .code-visual pre{
-    font-size:10px
   }
 }
 @media(prefers-reduced-motion:reduce){
