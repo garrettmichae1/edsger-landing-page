@@ -33,7 +33,7 @@ h1,h2,h3,h4{
   letter-spacing:-.045em
 }
 h1{
-  font-size:clamp(58px,6.2vw,88px);
+  font-size:clamp(52px,5.5vw,76px);
   font-weight:750
 }
 h2{
@@ -1217,7 +1217,7 @@ a,button,summary{
     gap:34px
   }
   .hero h1{
-    font-size:clamp(44px,13vw,76px);
+    font-size:clamp(36px,10vw,65px);
     line-height:1.04;
     margin-bottom:20px
   }

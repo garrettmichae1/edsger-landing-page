@@ -38,7 +38,7 @@
   ];
   const video = document.getElementById('product-demo');
   const buttons = [...document.querySelectorAll('[data-demo]')];
-  let active = 0;
+  let active = 1;
   let manuallyPaused = false;
   let inView = false;
   let systemPause = false;
