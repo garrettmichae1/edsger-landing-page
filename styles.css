@@ -1,0 +1,450 @@
+:root {
+  color-scheme: light;
+  --bg: #f2f2f7;
+  --card: #ffffff;
+  --ink: #1c1c1e;
+  --muted: #636366;
+  --line: #d1d1d6;
+  --accent: #007aff;
+  --header: #f2f2f7;
+  --radius: 22px;
+  --measure: 38rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #000000;
+    --card: #1c1c1e;
+    --ink: #f5f5f7;
+    --muted: #aeaeb2;
+    --line: #38383a;
+    --accent: #0a84ff;
+    --header: #000000;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 128px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.47;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+.wordmark,
+.price {
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: clamp(2.15rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.08;
+  max-width: 16ch;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+p {
+  max-width: var(--measure);
+}
+
+a {
+  color: var(--ink);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.skip {
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  transform: translateY(-140%);
+  background: var(--card);
+  color: var(--ink);
+  padding: 8px 12px;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.skip:focus {
+  transform: none;
+}
+
+.wrap {
+  width: min(1080px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--header);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+  min-height: 56px;
+  padding-block: 8px;
+}
+
+.wordmark {
+  order: 1;
+  margin-right: auto;
+  color: var(--ink);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.header-cta {
+  order: 2;
+}
+
+.site-nav {
+  order: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  width: 100%;
+  padding-bottom: 4px;
+}
+
+.site-nav a {
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 980px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: none;
+  filter: brightness(1.06);
+}
+
+.hero {
+  padding: 40px 0 12px;
+}
+
+.copy p + p {
+  margin-top: 0.85rem;
+}
+
+.store-row {
+  margin-top: 1.35rem;
+}
+
+.store-link {
+  display: inline-block;
+  line-height: 0;
+  border-radius: 7px;
+}
+
+.badge {
+  height: 44px;
+  width: auto;
+}
+
+.badge-on-dark {
+  display: none;
+}
+
+.aside,
+.caption,
+.fine,
+.limits p,
+.limits h2 {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.aside {
+  margin-top: 0.75rem;
+}
+
+.shot {
+  margin-top: 36px;
+}
+
+.shot img {
+  display: block;
+  width: min(100%, 320px);
+  margin-inline: auto;
+}
+
+.facts {
+  padding: 28px 0 8px;
+}
+
+.fact-list,
+.card-grid,
+.benefits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fact-list {
+  display: grid;
+  gap: 12px;
+}
+
+.fact-list li,
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+}
+
+.fact-list li {
+  padding: 22px 22px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.card-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  padding: 22px 22px 24px;
+}
+
+.card p {
+  margin-top: 0.55rem;
+  font-size: 1.05rem;
+}
+
+.lede {
+  margin-top: -0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.plan .price {
+  margin-top: 0.85rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.amount {
+  font-size: 2.15rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.caption {
+  margin-top: 0.9rem;
+}
+
+.subhead {
+  margin-top: 2rem;
+  margin-bottom: 0.35rem;
+}
+
+.benefits {
+  max-width: var(--measure);
+  border-top: 1px solid var(--line);
+}
+
+.benefits li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.fine {
+  margin-top: 1.25rem;
+}
+
+.limits {
+  padding-top: 0;
+}
+
+.limits h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-bottom: 0.35rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 48px;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.site-footer a {
+  font-size: 1rem;
+}
+
+.site-footer p {
+  margin-top: 0.85rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (min-width: 720px) {
+  html {
+    scroll-padding-top: 84px;
+  }
+
+  .wrap {
+    width: min(1080px, calc(100% - 64px));
+  }
+
+  .wordmark {
+    margin-right: 12px;
+  }
+
+  .site-nav {
+    order: 2;
+    width: auto;
+    padding-bottom: 0;
+  }
+
+  .header-cta {
+    order: 3;
+    margin-left: auto;
+  }
+
+  .card-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 640px) {
+  .card-grid-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    padding: 72px 0 20px;
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+    gap: 32px 64px;
+    align-items: start;
+  }
+
+  .split-reverse .copy {
+    order: 2;
+  }
+
+  .shot {
+    margin-top: 0;
+  }
+
+  .shot img {
+    width: min(100%, 340px);
+  }
+
+  .fact-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section {
+    padding: 104px 0;
+  }
+
+  .card-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .badge-on-light {
+    display: none;
+  }
+
+  .badge-on-dark {
+    display: inline;
+  }
+}
