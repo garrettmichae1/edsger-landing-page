@@ -240,12 +240,17 @@ a:hover {
   padding: 40px 0 12px;
 }
 
+.hero h1 {
+  margin-bottom: 1.75rem;
+  line-height: 1.16;
+}
+
 .copy p + p {
   margin-top: 0.85rem;
 }
 
-.store-row {
-  margin-top: 1.35rem;
+.hero .store-row {
+  margin-top: 2.4rem;
 }
 
 .store-link {
@@ -277,8 +282,8 @@ a:hover {
   white-space: nowrap;
 }
 
-.aside {
-  margin-top: 0.75rem;
+.hero .aside {
+  margin-top: 1.5rem;
 }
 
 .shot {
@@ -611,12 +616,6 @@ a:hover {
   }
 }
 
-@media (min-width: 640px) {
-  .card-grid-4 {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 @media (min-width: 900px) {
   .hero {
     padding: 72px 0 20px;
@@ -639,10 +638,6 @@ a:hover {
 
   .section {
     padding: 104px 0;
-  }
-
-  .card-grid-4 {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 
