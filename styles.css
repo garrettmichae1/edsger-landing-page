@@ -1206,7 +1206,7 @@ a,button,summary{
     grid-template-columns:.9fr 1.1fr
   }
   .hero h1{
-    font-size:67px
+    font-size:clamp(52px,6vw,67px)
   }
   .hero-description{
     font-size:16px
@@ -1273,7 +1273,7 @@ a,button,summary{
     gap:26px
   }
   .hero h1{
-    font-size:56px
+    font-size:clamp(40px,6.5vw,56px)
   }
   .hero-copy>.eyebrow{
     font-size:9px;
@@ -1509,7 +1509,7 @@ a,button,summary{
     margin-bottom:18px
   }
   .hero h1{
-    font-size:clamp(53px,13.5vw,76px);
+    font-size:clamp(44px,13vw,76px);
     line-height:1.04;
     margin-bottom:20px
   }
