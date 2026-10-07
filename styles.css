@@ -241,6 +241,7 @@ a:hover {
 }
 
 .hero h1 {
+  max-width: 11em;
   margin-bottom: 1.75rem;
   line-height: 1.16;
 }
@@ -292,8 +293,8 @@ a:hover {
 
 .shot-pair {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
   align-items: start;
 }
 
@@ -301,7 +302,7 @@ a:hover {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 28px;
+  border-radius: 18px;
   background: #000;
 }
 
@@ -379,7 +380,7 @@ a:hover {
   top: 0;
   transform-origin: 50% 100%;
   animation: crawl 34s linear infinite;
-  color: #ffe81f;
+  color: #fff;
   text-align: center;
   font-size: clamp(1.65rem, 4.6vw, 2.6rem);
   font-weight: 700;
@@ -623,7 +624,7 @@ a:hover {
 
   .hero .split {
     display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+    grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
     gap: 32px 48px;
     align-items: center;
   }
@@ -633,7 +634,11 @@ a:hover {
   }
 
   .shot-pair {
-    gap: 16px;
+    gap: 12px;
+  }
+
+  .shot video {
+    border-radius: 22px;
   }
 
   .section {
