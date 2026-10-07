@@ -1552,14 +1552,14 @@ a,button,summary{
     font-size:10px
   }
   .demo-body{
-    display:grid;
-    grid-template-columns:minmax(0,1fr) 170px;
-    gap:16px;
+    display:flex;
+    flex-direction:column;
+    gap:24px;
     padding:23px 20px;
     min-height:0
   }
   .phone-shell{
-    width:100%;
+    width:min(100%,230px);
     padding:5px;
     border-radius:25px;
     transform:rotate(1deg)
@@ -1568,35 +1568,33 @@ a,button,summary{
     border-radius:20px
   }
   .demo-description h2{
-    font-size:25px;
-    line-height:1.1
+    font-size:26px;
+    line-height:1.15;
+    overflow-wrap:anywhere
   }
   .demo-description h2 br{
     display:initial
   }
   .demo-description>p:not(.eyebrow){
-    font-size:11px
+    font-size:13px
   }
   .demo-description .eyebrow{
     font-size:9px
   }
   .demo-label{
-    font-size:10px;
+    font-size:11px;
     gap:6px;
-    margin-top:20px
+    margin-top:16px
   }
   .demo-label svg{
     width:13px;
     height:13px
   }
   .demo-label small{
-    font-size:9px
+    font-size:10px
   }
   .demo-footnote{
-    display:flex;
-    margin-top:24px;
-    font-size:9px;
-    gap:8px
+    display:none
   }
   .demo-footnote>span:first-child{
     font-size:24px
@@ -1883,25 +1881,7 @@ a,button,summary{
     width:calc(100% - 30px)
   }
   .demo-body{
-    grid-template-columns:minmax(0,1fr) 143px;
-    gap:12px;
     padding-inline:16px
-  }
-  .demo-description h2{
-    font-size:22px
-  }
-  .demo-description>p:not(.eyebrow){
-    font-size:10px
-  }
-  .demo-label{
-    font-size:9px;
-    margin-top:13px
-  }
-  .demo-label small{
-    font-size:8px
-  }
-  .demo-footnote{
-    margin-top:16px
   }
   .demo-choice{
     font-size:8px;
