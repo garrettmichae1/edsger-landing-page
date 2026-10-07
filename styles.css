@@ -1167,7 +1167,7 @@ a,button,summary{
 }
 @media(max-width:650px){
   html{
-    scroll-padding-top:120px
+    scroll-padding-top:140px
   }
   .wrap{
     width:calc(100% - 36px)
