@@ -590,15 +590,17 @@ a,button,summary{
 .model-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px
+  gap:28px
 }
 .model-card{
   display:flex;
   flex-direction:column;
-  border:1px solid var(--line);
-  border-radius:22px;
-  padding:28px;
-  background:var(--bg)
+  padding:0;
+  min-width:0
+}
+.model-card+.model-card{
+  border-left:1px solid var(--line);
+  padding-left:28px
 }
 .model-tag{
   font-size:9px;
@@ -629,8 +631,6 @@ a,button,summary{
   display:flex;
   align-items:center;
   gap:9px;
-  border-top:1px solid var(--line);
-  padding-top:18px;
   margin-top:auto;
   font-size:11px;
   font-weight:650
@@ -639,10 +639,6 @@ a,button,summary{
   width:17px;
   height:17px;
   color:var(--blue)
-}
-.model-cloud{
-  background:#edf3ff;
-  border-color:#cfdef7
 }
 .model-cloud .model-tag{
   color:var(--blue)
@@ -1086,10 +1082,10 @@ a,button,summary{
     font-size:11px
   }
   .model-grid{
-    gap:14px
+    gap:18px
   }
-  .model-card{
-    padding:23px 20px
+  .model-card+.model-card{
+    padding-left:18px
   }
   .model-card h3{
     font-size:21px
@@ -1391,10 +1387,12 @@ a,button,summary{
   }
   .model-grid{
     grid-template-columns:1fr;
-    gap:14px
+    gap:28px
   }
-  .model-card{
-    padding:25px
+  .model-card+.model-card{
+    border-left:0;
+    border-top:1px solid var(--line);
+    padding:28px 0 0
   }
   .model-card h3{
     font-size:24px;
@@ -1414,7 +1412,7 @@ a,button,summary{
   }
   .model-bottom{
     font-size:11px;
-    padding-top:15px
+    padding-top:0
   }
   .section-note{
     font-size:11px;
