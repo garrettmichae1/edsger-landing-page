@@ -5,7 +5,6 @@
   --muted:#58677b;
   --blue:#0866f5;
   --line:#dde4ed;
-  --gold:#bd7f1e;
   --radius:28px;
   --shadow:0 20px 70px rgba(20,42,76,.08);
   color-scheme:light
@@ -217,6 +216,9 @@ a,button,summary{
   gap:48px;
   align-items:center
 }
+.hero-copy{
+  min-width:0
+}
 .hero h1{
   margin-bottom:24px
 }
@@ -287,7 +289,8 @@ a,button,summary{
 .demo-description h2{
   font-size:30px;
   letter-spacing:-.04em;
-  margin:12px 0 18px
+  margin:12px 0 18px;
+  overflow-wrap:anywhere
 }
 .demo-description>p:not(.eyebrow){
   font-size:13px;
@@ -742,13 +745,6 @@ a,button,summary{
 .plan-pro .plan-label{
   color:var(--blue)
 }
-.plan-plus{
-  background:linear-gradient(140deg,#fff,#fffbf2);
-  border-color:#e9dbc1
-}
-.plan-plus .plan-label{
-  color:#85601e
-}
 .pricing-notes{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -931,8 +927,14 @@ a,button,summary{
 }
 @media(max-width:1050px){
   .hero-grid{
-    gap:28px;
-    grid-template-columns:.9fr 1.1fr
+    gap:40px;
+    grid-template-columns:1fr
+  }
+  .hero-copy{
+    max-width:680px
+  }
+  .hero-description{
+    max-width:560px
   }
   .hero h1{
     font-size:clamp(52px,6vw,67px)
@@ -941,9 +943,9 @@ a,button,summary{
     font-size:16px
   }
   .demo-body{
-    grid-template-columns:1fr 205px;
-    gap:16px;
-    padding:26px 20px;
+    grid-template-columns:minmax(0,1fr) 230px;
+    gap:40px;
+    padding:32px;
     min-height:475px
   }
   .demo-description h2{
@@ -992,8 +994,8 @@ a,button,summary{
     padding:48px 0
   }
   .hero-grid{
-    grid-template-columns:1fr 1fr;
-    gap:26px
+    grid-template-columns:1fr;
+    gap:34px
   }
   .hero h1{
     font-size:clamp(40px,6.5vw,56px)
@@ -1003,8 +1005,8 @@ a,button,summary{
   }
   .hero-actions{
     gap:16px;
-    align-items:flex-start;
-    flex-direction:column
+    align-items:center;
+    flex-direction:row
   }
   .hero-note{
     font-size:11px;
@@ -1014,9 +1016,9 @@ a,button,summary{
     font-size:10px
   }
   .demo-body{
-    display:flex;
-    flex-direction:column;
-    gap:22px;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 230px;
+    gap:30px;
     min-height:0;
     padding:22px
   }
@@ -1037,7 +1039,7 @@ a,button,summary{
     margin-top:12px
   }
   .phone-shell{
-    width:195px;
+    width:230px;
     border-radius:30px
   }
   .phone-screen{
@@ -1082,10 +1084,13 @@ a,button,summary{
     font-size:11px
   }
   .model-grid{
-    gap:18px
+    grid-template-columns:1fr;
+    gap:28px
   }
   .model-card+.model-card{
-    padding-left:18px
+    border-left:0;
+    border-top:1px solid var(--line);
+    padding:28px 0 0
   }
   .model-card h3{
     font-size:21px
@@ -1100,7 +1105,10 @@ a,button,summary{
     font-size:10px
   }
   .pricing-grid{
-    gap:14px
+    grid-template-columns:1fr;
+    gap:18px;
+    max-width:600px;
+    margin-inline:auto
   }
   .plan-card{
     padding:26px 18px
@@ -1124,7 +1132,8 @@ a,button,summary{
     padding-inline:10px
   }
   .plan-description{
-    font-size:11px
+    font-size:13px;
+    min-height:0
   }
   .plan-label{
     font-size:9px
