@@ -186,6 +186,56 @@ a:hover {
   filter: brightness(1.06);
 }
 
+.soon {
+  border-bottom: 1px solid var(--line);
+}
+
+.soon-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 28px;
+  min-height: 52px;
+  padding-block: 10px;
+}
+
+.soon-kicker {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.platforms li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.emblem {
+  width: 16px;
+  height: 16px;
+  display: block;
+  flex: none;
+}
+
 .hero {
   padding: 40px 0 12px;
 }
@@ -235,10 +285,14 @@ a:hover {
   margin-top: 36px;
 }
 
-.shot img {
+.shot img,
+.shot video {
   display: block;
-  width: min(100%, 320px);
+  width: min(100%, 300px);
+  height: auto;
   margin-inline: auto;
+  border-radius: 28px;
+  background: #000;
 }
 
 .facts {
@@ -422,8 +476,9 @@ a:hover {
     margin-top: 0;
   }
 
-  .shot img {
-    width: min(100%, 340px);
+  .shot img,
+  .shot video {
+    width: min(100%, 320px);
   }
 
   .fact-list {
