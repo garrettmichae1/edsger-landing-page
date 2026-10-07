@@ -4,17 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Edsger — A full IDE on your iPhone and iPad</title>
-  <meta name="description" content="A full IDE on your iPhone and iPad. Syntax highlighting, error messages, a sandbox for C, Python, JavaScript, and Lua, unlimited free chat with local models and file uploads, and an offline AI agent with no rate limits.">
+  <meta name="description" content="A full IDE for iPhone and iPad. For developers, students in any subject, and anyone who needs a hand. Write and run code on your device, with unlimited offline chat and an AI agent. No account.">
   <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.classList.add("js");
+    }
+  </script>
 </head>
 <body>
   <a class="skip" href="#content">Skip to content</a>
 
   <header class="site-header">
     <div class="wrap header-bar">
-      <a class="wordmark" href="#top">Edsger</a>
+      <a class="wordmark" href="#top"><img src="assets/app-icon.png" width="180" height="180" alt="Edsger"></a>
       <a class="button header-cta" href="https://apps.apple.com/app/id6806824902">Get the app</a>
       <nav class="site-nav" aria-label="On this page">
         <a href="#learn">Learn</a>
@@ -54,14 +59,14 @@
       <div class="wrap split">
         <div class="copy">
           <h1>A full IDE on your iPhone and iPad.</h1>
-          <p>Syntax highlighting, error messages, and a sandbox for C, Python, JavaScript, and Lua. Unlimited free chat with local models and file uploads. An offline AI agent works on your code, with no rate limits. No account needed.</p>
+          <p>For developers, students in any subject, and anyone who needs a hand. Write, run, and fix real programs on the device. Unlimited offline chat, file uploads, and an AI agent. No rate limits. No account.</p>
           <p class="store-row">
             <a class="store-link" href="https://apps.apple.com/app/id6806824902" aria-label="Download on the App Store">
               <img class="badge badge-on-light" src="assets/badge-black.svg" width="120" height="40" alt="">
               <img class="badge badge-on-dark" src="assets/badge-white.svg" width="120" height="40" alt="">
             </a>
           </p>
-          <p class="aside">Free on the App Store. iPhone and iPad.</p>
+          <p class="aside">Free on the App Store. Nothing to sign up for.</p>
         </div>
         <div class="shot shot-pair">
           <video autoplay muted loop playsinline controls preload="metadata" poster="assets/hero-poster.jpg" width="780" height="1604" aria-label="Edsger on iPhone, editing a Python project and asking the agent about the code.">
@@ -99,38 +104,50 @@
       </div>
     </section>
 
-    <section class="section" id="editor">
+    <section class="section reveal" id="editor">
       <div class="wrap">
         <h2>Editor</h2>
-        <p>Each language has its own project. Write the program, then press Run. Stop a running program when you need to. Console input works in the editor. Projects stay on the device.</p>
+        <p>Write it on the phone and run it there. Syntax highlighting, error messages, and console input are built in. Press Run, and Stop when you need to. The project stays on your iPhone or iPad.</p>
       </div>
     </section>
 
-    <section class="section" id="learn">
+    <section class="section reveal" id="learn">
       <div class="wrap">
         <h2>Chat</h2>
-        <p>Unlimited free chat with local models. Attach files. Ask it to explain code, fix an error, or walk through a math or science problem. Math answers are step by step.</p>
+        <p>Any subject, not just code. Chat is unlimited, free, and local, and you can attach a file. Have it explain a program, fix an error, or walk through a math or science problem, step by step.</p>
       </div>
     </section>
 
-    <section class="section" id="agent">
+    <section class="section reveal" id="agent">
       <div class="wrap">
         <h2>Agent</h2>
-        <p>Describe a change. The agent reads, edits, and runs files in the project. It keeps restore points. You still press Run.</p>
+        <p>Describe the change. The agent reads the project, edits the files, and runs them. Restore points are kept, so you can step back. You still press Run.</p>
       </div>
     </section>
 
-    <section class="section" id="pro">
+    <section class="pro-stage" id="pro">
       <div class="wrap">
-        <h2>Pro</h2>
-        <p class="lede">Optional.</p>
-        <div class="card-grid card-grid-2">
-          <article class="card plan">
+        <p class="eyebrow">Pro</p>
+        <h2>Free is the whole IDE. Pro is speed, and what comes next.</h2>
+        <p class="lede">Your own keys, a faster cloud model, and first access to the tooling server.</p>
+        <div class="launch">
+          <p class="launch-kicker">Next week</p>
+          <p class="launch-title">Tooling server</p>
+          <ul class="launch-chips">
+            <li>Posters</li>
+            <li>Worksheets</li>
+            <li>And more</li>
+          </ul>
+          <p class="launch-note">Pro gets it first.</p>
+        </div>
+        <div class="card-grid card-grid-2 pro-plans">
+          <article class="card plan reveal">
             <h3>Pro</h3>
             <p class="price"><span class="amount">$10</span> per month</p>
             <p>Standard monthly allowance</p>
           </article>
-          <article class="card plan">
+          <article class="card plan plan-plus reveal">
+            <p class="plan-flag">More room</p>
             <h3>Pro Plus</h3>
             <p class="price"><span class="amount">$25</span> per month</p>
             <p>3× the Pro allowance</p>
@@ -138,12 +155,14 @@
         </div>
         <p class="caption">The App Store shows the price for your region.</p>
         <h3 class="subhead">Both plans</h3>
-        <ul class="benefits">
+        <ul class="benefit-grid">
           <li>Dijkstra Super Fast 1.0, a faster cloud model for Chat and the Agent</li>
+          <li>Your own OpenAI or Claude key</li>
+          <li>Git</li>
+          <li>Notes</li>
+          <li>A custom screensaver</li>
+          <li>First access each week to new tools, models, and discounts</li>
           <li>Photos in Chat with Dijkstra</li>
-          <li>Your own OpenAI or Claude API key</li>
-          <li>Push projects to GitHub</li>
-          <li>A custom Chat note, your text color, and backgrounds</li>
         </ul>
         <p class="fine">Cloud AI runs only after you allow sharing, and you can turn it off. Pro Plus is the same product with a larger monthly allowance. Your provider bills API-key usage separately. Subscriptions renew monthly unless canceled at least 24 hours before the period ends. Manage them in Apple Account settings.</p>
       </div>
@@ -152,7 +171,7 @@
     <section class="section limits" aria-labelledby="limits-title">
       <div class="wrap">
         <h2 id="limits-title">Limits</h2>
-        <p>C runs in PicoC, not GCC or Clang, so some standard library features are missing. Python, JavaScript, and Lua run without package installs, network access, or a graphical interface. AI can make mistakes. Review its code, and do not rely on it for medical, legal, or financial advice.</p>
+        <p>C runs in PicoC, not GCC or Clang, so some library features are missing. Python, JavaScript, and Lua run on the device, without package installs, network access, or a graphical interface. The AI can be wrong. Read what it writes, and do not use it for medical, legal, or financial decisions.</p>
       </div>
     </section>
   </main>
@@ -167,5 +186,23 @@
       <p>© 2026 Garrett Michael Woodside</p>
     </div>
   </footer>
+  <script>
+    (function () {
+      if (!document.documentElement.classList.contains("js")) return;
+      var nodes = document.querySelectorAll(".reveal");
+      if (!("IntersectionObserver" in window)) {
+        nodes.forEach(function (node) { node.classList.add("is-in"); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-in");
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.18 });
+      nodes.forEach(function (node) { observer.observe(node); });
+    })();
+  </script>
 </body>
 </html>
