@@ -403,8 +403,20 @@ a,button,summary{
   font-size:11px;
   color:var(--muted)
 }
+.mac-film{
+  display:block;
+  width:100%;
+  height:auto;
+  margin:0 0 48px;
+  border-radius:var(--radius);
+  background:#101218;
+  box-shadow:var(--shadow)
+}
 .section{
   padding:100px 0
+}
+.features-section{
+  padding-top:40px
 }
 .section-heading{
   max-width:710px;
@@ -1068,6 +1080,13 @@ a,button,summary{
   .section{
     padding:75px 0
   }
+  .features-section{
+    padding-top:32px
+  }
+  .mac-film{
+    margin-bottom:32px;
+    border-radius:22px
+  }
   .section-heading h2{
     font-size:43px
   }
@@ -1324,6 +1343,13 @@ a,button,summary{
   }
   .section{
     padding:58px 0
+  }
+  .features-section{
+    padding-top:24px
+  }
+  .mac-film{
+    margin-bottom:28px;
+    border-radius:18px
   }
   .section-heading{
     margin-bottom:28px

@@ -99,4 +99,45 @@
       else tryPlay();
     });
   }
+  const macDemo = document.getElementById('mac-demo');
+  if (macDemo) {
+    let macPaused = false;
+    let macInView = false;
+    let macSystemPause = false;
+    function pauseMac() {
+      if (macDemo.paused) return;
+      macSystemPause = true;
+      macDemo.pause();
+    }
+    function playMac() {
+      if (reducedMotion.matches || macPaused || !macInView || document.hidden) return;
+      const promise = macDemo.play();
+      if (promise) promise.catch(() => {});
+    }
+    macDemo.addEventListener('pause', () => {
+      if (macSystemPause) { macSystemPause = false; return; }
+      if (macInView && !document.hidden && !macDemo.ended) macPaused = true;
+    });
+    macDemo.addEventListener('play', () => { macPaused = false; });
+    macDemo.addEventListener('canplay', playMac);
+    if ('IntersectionObserver' in window) {
+      const macObserver = new IntersectionObserver(entries => {
+        macInView = entries.some(entry => entry.isIntersecting);
+        if (macInView) playMac();
+        else pauseMac();
+      }, { threshold: 0.15 });
+      macObserver.observe(macDemo);
+    } else {
+      macInView = true;
+      playMac();
+    }
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) pauseMac();
+      else playMac();
+    });
+    reducedMotion.addEventListener('change', () => {
+      if (reducedMotion.matches) pauseMac();
+      else playMac();
+    });
+  }
 })();
